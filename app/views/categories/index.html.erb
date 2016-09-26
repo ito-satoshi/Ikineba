@@ -5,6 +5,12 @@
 <font size="5" color="blue">カテゴリー一覧</font>
 <br><br>
 
+  <%= form_tag(:action=>"search") do %>
+     <%= text_field_tag "search[categoryname]", @search_value  %>
+     <%= submit_tag "検索" %>
+     <%= link_to "リセット", categories_path %>
+  <% end %>
+
 <table style="background-color: peru">
   <thead>
     <tr>
